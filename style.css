@@ -1,0 +1,37 @@
+main{
+    display : flex;
+    flex-direction : row;
+    background: #c4dafa;
+    width: 100%;
+    height: 80%;
+}
+
+.principal{
+    width: 70%;
+    padding:10%;
+}
+
+.logo{
+    padding: 1.5%;
+}
+
+.entrada{
+    background: #c4dafa;
+    border: 0;
+    outline: none;
+    color: #005187;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.salida{
+    width: 30%;
+    background: #fcffff;
+    float: right;
+}
+
+footer{
+    width: 100%;
+    height: 20%;
+    background: #4d82bc;
+}
