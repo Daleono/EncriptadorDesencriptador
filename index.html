@@ -1,50 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encriptador Alura</title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <main>
-        <h1 class="logo"><img src="img/Logo.png"></h1>
-        <div class="principal">
-            <input class="entrada" type="text">
-            <img src="img/exclamacion.png">
-            <p>Solo letras minúsculas y sin acentos</p>
-            <div>
-                <input type="button" value="Encriptar">
-                <input type="button" value="Desencriptar">
-            </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Encriptador Alura</title>
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+        <header><img class="logo" src="img/Logo.png" alt="Logo Alura."></header>
+        <div class="botones">
+            <textarea class="entrada" rows="14" placeholder="Ingrese el texto aquí"></textarea>
+            <p class="advertencia">
+                <img class="exclamacion" src="img/exclamacion.png">
+                Solo letras minúsculas y sin acentos
+            </p>
+            <input class="input_encriptar" type="button" value="Encriptar">
+            <input class="input_descencriptar" type="button" value="Descencriptar">
         </div>
         <div class="salida">
-            <img src="img/Muñeco.png">
-            <div>
-                Ningún Mensaje fue encontrado
-            </div>
-            <div>
-                Ingresa el texto que desees encriptar o descencriptar.
-            </div>
+            <img src="img/Muñeco.png" alt="Imagen de niño con lupa.">
+            <h2>Ningún Mensaje fue encontrado</h2>
+            <p>Ingresa el texto que desees encriptar o descencriptar.</p>
         </div>
-    </main>
-    <footer>
-        <h2>
-            Datos del Desarrollador
-        </h2>
-        <p>
-            <b>Nombre:</b> David Leonardo González Jiménez 
-        </p>
-        <p>
-            <b>Perfil Alura:</b> <a href="https://app.aluracursos.com/user/davidgonzalez15818">https://app.aluracursos.com/user/davidgonzalez15818</a>
-        </p>
-        <p>
-            <b>Perfil GitHub:</b> <a href="https://github.com/Daleono">https://github.com/Daleono</a>
-        </p>
-        <p>
-            <b>Edad Actual:</b> 23
-        </p>
-    </footer>
-</body>
+
+
+        <div class="datos">
+            <h2>Datos del Desarrollador</h2>
+            <!--
+            <p>Nombre: David Leonardo González Jiménez</p>
+            -->
+            <p>Perfil Alura: <a href="https://app.aluracursos.com/user/davidgonzalez15818">https://app.aluracursos.com/user/davidgonzalez15818</a></p>
+            <p>Perfil GitHub: <a href="https://github.com/Daleono">https://github.com/Daleono</a></p>
+            <!--
+            <p>Edad Actual: 23</p>
+            -->
+        </div>
+    </body>
 </html>
