@@ -14,13 +14,13 @@ body{
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+    font-family: "Montserrat", sans-serif;
 }
 
 header{
     margin: 2%;
-    display: inline;
-    width: 60%;
-    vertical-align: top;
+    display: inline-block;
+    width: 50%;
 }
 
 header img{
@@ -30,16 +30,20 @@ header img{
 .botones{
     display: inline-block;
     width: 50%;
+    margin-left: 10%;
+    margin-bottom: 5%;
 }
 
 .entrada{
+    height: 30vh;
     color: #005187;
     font-size: 25px;
     border: 0;
     background: #C4DAFA;
     width: 100%;
-    font-weight: bold;
+    font-weight: bold; 
     padding: 2%;
+    resize: none;
 }
 
 .entrada::placeholder{
@@ -111,14 +115,17 @@ header img{
 }
 
 .salida{
-    width: 20%;
+    width: 22%;
+    height: 75vh;
     background: #FCFFFF;
     text-align: center;
     display: inline-block;
-    margin: 3% 0 3% 10%;
-    padding: 11% 2% 1% 2%;
+    margin-left: 10%;
+    padding: 0% 2% 1% 2%;
     border-radius: 25px;
     border: 1px solid #84B6F4;
+    vertical-align: top;
+    overflow: auto;
 }
 
 .salida:hover{
@@ -136,6 +143,10 @@ header img{
     font-size: 18px;
 }
 
+.muñeco{
+    margin-top: 18%;
+}
+
 .datos{
     background: #005187;
     font-weight: bold;
@@ -143,6 +154,8 @@ header img{
     padding-bottom: 1%;
     padding-top: 1%;
     padding-left: 1%;
+    min-height: 30%;
+    margin-top: 2%;
 }
 
 .datos h2{
@@ -151,13 +164,79 @@ header img{
 
 .datos p, .datos a{
     color: #C4DAFA;
+    vertical-align: baseline;
+
 }
 
 .datos a{
     font-weight: bold;
     text-decoration: none;
+
 }
 
 .datos a:hover{
     text-decoration: underline;
+}
+
+@media screen and (max-width: 1300px){
+    html, body{
+        height: 100%;
+    }
+
+    header{
+        display: block;
+        margin-bottom: 5%;
+    }
+
+    .botones{
+        width: 80%;
+        margin: 0 auto;
+        display:block;
+
+    }
+
+    .exclamacion{
+        width: 2%;
+    }
+
+    .botones p{
+        font-size: 20px;
+    }
+
+    .muñeco{
+        display: none;
+    }
+
+    .salida{
+        width: 80%;
+        display:block;
+        margin-top: 8%;
+        padding-top: 1%;
+        max-height: 30vh;
+        overflow: auto;
+    }
+
+    .datos{
+        min-height: 30%;
+    }
+}
+
+
+@media screen and (max-width: 480px){
+    body, html{
+        width: 125%;
+    }
+
+    .botones{
+        width: 80%;
+
+    }
+
+    .input_encriptar{
+        width: 40%;
+    }
+    
+    .input_descencriptar{
+        width: 40%;
+    }
 }
