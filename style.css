@@ -35,7 +35,7 @@ header img{
 }
 
 .entrada{
-    height: 30vh;
+    height: 60vh;
     color: #005187;
     font-size: 25px;
     border: 0;
@@ -44,6 +44,7 @@ header img{
     font-weight: bold; 
     padding: 2%;
     resize: none;
+    overflow: overlay
 }
 
 .entrada::placeholder{
@@ -126,6 +127,10 @@ header img{
     border: 1px solid #84B6F4;
     vertical-align: top;
     overflow: auto;
+}
+
+.salida::-webkit-scrollbar {
+    display: none;
 }
 
 .salida:hover{

@@ -33,15 +33,15 @@ function encriptar(){
             if(texto_usuario[i] === 'a')
                 texto_final = texto_final + "ai";
             else if(texto_usuario[i] === 'e')
-            texto_final = texto_final + "enter";
+                texto_final = texto_final + "enter";
             else if(texto_usuario[i] === 'i')
-            texto_final = texto_final + "imes";
+                texto_final = texto_final + "imes";
             else if(texto_usuario[i] === 'o')
-            texto_final = texto_final + "ober";
+                texto_final = texto_final + "ober";
             else if(texto_usuario[i] === 'u')
-            texto_final = texto_final + "ufat";
+                texto_final = texto_final + "ufat";
             else
-            texto_final = texto_final + texto_usuario[i];
+                texto_final = texto_final + texto_usuario[i];
         }
         asignar_texto("salida_p", texto_final);
     }
@@ -49,7 +49,37 @@ function encriptar(){
 }
 
 function descencriptar(){
-
+    let texto_usuario = document.getElementById("entrada").value;
+    let texto_final = "";
+    if(inputConInfo(texto_usuario) === 1){
+        for(let i = 0 ; i < texto_usuario.length ; i++){
+            console.log(texto_usuario.slice(i, i+2));
+            if(texto_usuario.slice(i, i+2) === "ai"){
+                texto_final = texto_final + 'a';
+                i++;
+            }
+            else if(texto_usuario.slice(i, i+5) === "enter"){
+                texto_final = texto_final + 'e';
+                i = i + 4;
+            }
+            else if(texto_usuario.slice(i, i+4) === "imes"){
+                texto_final = texto_final + 'i';
+                i = i + 3;
+            }
+            else if(texto_usuario.slice(i, i+4) === "ober"){
+                texto_final = texto_final + 'o';
+                i = i + 3;
+            }
+            else if(texto_usuario.slice(i, i+4) === "ufat"){
+                texto_final = texto_final + 'u';
+                i = i + 3;
+            }
+            else{
+                texto_final = texto_final + texto_usuario[i];
+            }
+        }
+        asignar_texto("salida_p", texto_final);
+    }
 }
 
 inicializar();
