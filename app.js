@@ -7,14 +7,15 @@ function asignar_texto(id, texto){
 function inicializar(){
     asignar_texto("salida_h2", "Ningún Mensaje fue encontrado");
     asignar_texto("salida_p", "Ingresa el texto que desees encriptar o descencriptar.");
-    console.log(window.innerWidth)
+    document.getElementById("input_copiar").style.display = "none";
     if(window.innerWidth > 1300)
         document.getElementById("salida_img").style.display = "block";
 }
 
-function inputConInfo(texto_usuario){
-    if(!(texto_usuario === "")){
+function inputConInfo(texto){
+    if(!(texto === "")){
         asignar_texto("salida_h2", "");
+        document.getElementById("input_copiar").style.display = "block";
         if(screen.width > 1300)
             document.getElementById("salida_img").style.display = "none";
         return 1;
@@ -27,6 +28,7 @@ function inputConInfo(texto_usuario){
 
 function encriptar(){
     let texto_usuario = document.getElementById("entrada").value;
+    document.getElementById("entrada").value = "";
     let texto_final = "";
     if(inputConInfo(texto_usuario) === 1){
         for(let i = 0 ; i < texto_usuario.length ; i++){
@@ -45,15 +47,14 @@ function encriptar(){
         }
         asignar_texto("salida_p", texto_final);
     }
-    
 }
 
 function descencriptar(){
     let texto_usuario = document.getElementById("entrada").value;
+    document.getElementById("entrada").value = "";
     let texto_final = "";
     if(inputConInfo(texto_usuario) === 1){
         for(let i = 0 ; i < texto_usuario.length ; i++){
-            console.log(texto_usuario.slice(i, i+2));
             if(texto_usuario.slice(i, i+2) === "ai"){
                 texto_final = texto_final + 'a';
                 i++;
@@ -80,6 +81,11 @@ function descencriptar(){
         }
         asignar_texto("salida_p", texto_final);
     }
+}
+
+function copiar(){
+    let texto_salida = document.getElementById("salida_p").textContent;
+    navigator.clipboard.writeText(texto_salida);
 }
 
 inicializar();

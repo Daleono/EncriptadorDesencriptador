@@ -117,7 +117,7 @@ header img{
 
 .salida{
     width: 22%;
-    height: 75vh;
+    height: 80vh;
     background: #FCFFFF;
     text-align: center;
     display: inline-block;
@@ -126,11 +126,6 @@ header img{
     border-radius: 25px;
     border: 1px solid #84B6F4;
     vertical-align: top;
-    overflow: auto;
-}
-
-.salida::-webkit-scrollbar {
-    display: none;
 }
 
 .salida:hover{
@@ -138,18 +133,52 @@ header img{
     border: 2px solid #4D82BC;
 }
 
-.salida:active{
-    border-radius: 100px;
-    border: 4px solid #005187;
-
-}
-
 .salida p{
     font-size: 18px;
 }
 
 .muñeco{
-    margin-top: 18%;
+    margin: auto;
+    margin-top: 20%;
+}
+
+.salida1{
+    height: 90%;
+    overflow: auto;
+
+}
+
+.salida1::-webkit-scrollbar {
+    display: none;
+}
+
+
+.input_copiar{
+    width: 90%;
+    background: #FCFFFF;
+    color: #005187;
+    border: 2px solid #4D82BC;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 1s all;
+    cursor: pointer;
+    padding: 15px 0;
+    margin: auto;
+}
+
+.input_copiar:hover{
+    transition: 0s all;
+    transform: scale(1.1);
+    border: 2px solid #84B6F4;
+}
+
+.input_copiar:active{
+    border: 2px solid #005187;
+}
+
+.salida2{
+    margin-top: 5%;
 }
 
 .datos{
@@ -183,6 +212,8 @@ header img{
     text-decoration: underline;
 }
 
+
+
 @media screen and (max-width: 1300px){
     html, body{
         height: 100%;
@@ -214,16 +245,28 @@ header img{
 
     .salida{
         width: 80%;
-        display:block;
         margin-top: 8%;
         padding-top: 1%;
         max-height: 30vh;
-        overflow: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .salida1{
+        width: 75%;
+    }
+
+    .salida2{
+        display: inline-block;
+        width: 25%;
+        position: static;
     }
 
     .datos{
         min-height: 30%;
     }
+
 }
 
 
